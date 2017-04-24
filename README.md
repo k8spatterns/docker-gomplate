@@ -1,4 +1,4 @@
-<a href="https://leanpub.com/k8spatterns"><img src="https://s3.amazonaws.com/titlepages.leanpub.com/k8spatterns/hero?1492193906" align="right" width="250px" style="float:right; margin: 50px 30px 30px 30px;"/></a>
+<a href="https://leanpub.com/k8spatterns"><img src="https://s3.amazonaws.com/titlepages.leanpub.com/k8spatterns/hero?1492193906" align="right" width="300px" style="float:right; margin: 50px 30px 30px 30px;"/></a>
 
 # Docker image for Gomplate 
 
