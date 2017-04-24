@@ -1,6 +1,6 @@
-# Docker image for Gomplate 
-
 <a href="https://leanpub.com/k8spatterns"><img src="https://s3.amazonaws.com/titlepages.leanpub.com/k8spatterns/hero?1492193906" align="right" width="250px" style="float:right; margin: 50px 30px 30px 30px;"/></a>
+
+# Docker image for Gomplate 
 
 This image build on top of [gomplate](https://github.com/hairyhenderson/gomplate). It adds support for bulk operation and is nicely fit for an init container to pre-process configuration files in a Kubernetes pod.
 
