@@ -1,4 +1,4 @@
-# Gomplate Wrapper
+# Docker image for Gomplate 
 
 <img src="https://s3.amazonaws.com/titlepages.leanpub.com/k8spatterns/hero?1492193906" align="right" width="300px" style="float:right; margin: 50px 0px 20px 30px;"/>
 
@@ -18,4 +18,4 @@ The entry point of this image expects three parameters:
 
 * The `--input-dir` directory holds the templates. These are typically baked into the image like in this example.
 * The `--datasource` is the directory holding the `gomplate` datasources. Each file in this directory is taken as an individual datasource which is used with the file's basename as key. E.g. a `config.yml` can be referenced from the template as `{{ (datasource "config").someKeyFromYamlFile }}`. This directory is typically mounted from the outside (e.g. from a Kubernetes `ConfigMap` backed volume).
-* The `--outour-dir` directory where to store the processed files. The generated files will have the same name as the input files. Only a flat directory is supported for the moment. This directory is typically also pointing to a directory within a volume so that the processed files can be used from the application to configure.
+* The `--output-dir` directory where to store the processed files. The generated files will have the same name as the input files. Only a flat directory is supported for the moment. This directory is typically also pointing to a directory within a volume so that the processed files can be used from the application to configure.
