@@ -1,8 +1,10 @@
 # Docker image for Gomplate 
 
-<img src="https://s3.amazonaws.com/titlepages.leanpub.com/k8spatterns/hero?1492193906" align="right" width="300px" style="float:right; margin: 50px 0px 20px 30px;"/>
+<a href="https://leanpub.com/k8spatterns"><img src="https://s3.amazonaws.com/titlepages.leanpub.com/k8spatterns/hero?1492193906" align="right" width="300px" style="float:right; margin: 50px 30px 30px 30px;"/></a>
 
 This image build on top of [gomplate](https://github.com/hairyhenderson/gomplate). It adds support for bulk operation and is nicely fit for an init container to pre-process configuration files in a Kubernetes pod.
+
+It is used in our upcoming [Kubernetes Patterns](https://leanpub.com/k8spatterns) book in examples for the [Configuration Template](https://github.com/k8spatterns/examples/tree/master/configuration/cm-template) pattern.
 
 This image is typically used as a base image like in 
 
