@@ -16,8 +16,12 @@ CMD [ "--datasource", "/params", \
       "--output-dir", "/out" ]
 ```
 
-The entry point of this image expects three parameters:
+The entry point is "gomplate" and can be configured in various. For our use case, where it is used as an init-container during application startup the following options are the most important.
 
 * The `--input-dir` directory holds the templates. These are typically baked into the image like in this example.
 * The `--datasource` is the directory holding the `gomplate` datasources. Each file in this directory is taken as an individual datasource which is used with the file's basename as key. E.g. a `config.yml` can be referenced from the template as `{{ (datasource "config").someKeyFromYamlFile }}`. This directory is typically mounted from the outside (e.g. from a Kubernetes `ConfigMap` backed volume).
 * The `--output-dir` directory where to store the processed files. The generated files will have the same name as the input files. Only a flat directory is supported for the moment. This directory is typically also pointing to a directory within a volume so that the processed files can be used from the application to configure.
+* Use `--chown <uid>:<gid>` for setting the ownership of the output files
+
+For a full list of options use `docker run -it k8spatterns/gomplate -h`.
+
