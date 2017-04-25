@@ -3,6 +3,7 @@ sudo: required
 services: 
   - docker
   
+# Try to use latest Docker version 
 before_install:
   - sudo apt-get update
   - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-engine
