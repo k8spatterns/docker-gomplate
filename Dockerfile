@@ -1,5 +1,5 @@
 FROM golang:1.8.1 as BUILD
-ARG version=v1.5.1.x1
+ARG version=v1.6.0-x1
 
 RUN mkdir -p /go/src/github.com/hairyhenderson \
  && git clone https://github.com/rhuss/gomplate.git /go/src/github.com/hairyhenderson/gomplate

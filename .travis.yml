@@ -1,0 +1,15 @@
+sudo: required
+
+services: 
+  - docker
+  
+before_install:
+  - sudo apt-get update
+  - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-engine
+  - docker --version
+  - [[ $TRAVIS_PULL_REQUEST == false ]] && [[ $TRAVIS_BRANCH == "master" ]] && \
+       docker build -t k8spattern/gomplate . && \
+       docker push -u "$DOCKER_USER" -p "$DOCKER_PASSWORD" k8spattern/gomplate
+  - [[ $TRAVIS_TAG ]] && \
+       docker build -t k8spattern/gomplate:${TRAVIS_TAG#v} . && \
+       docker push -u "$DOCKER_USER" -p "$DOCKER_PASSWORD" k8spattern/gomplate:${TRAVIS_TAG#v}
