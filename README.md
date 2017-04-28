@@ -4,7 +4,7 @@
 
 This image builds on top of a statically compiled [gomplate](https://github.com/hairyhenderson/gomplate) which uses `scratch` as base image (so it's quite small). It adds support for bulk operation and is a nicely fit for an init container to pre-process configuration files in a Kubernetes pod.
 
-It is used in our future [Kubernetes Patterns](https://leanpub.com/k8spatterns) book in examples for the [Configuration Template](https://github.com/k8spatterns/examples/tree/master/configuration/ConfigurationTemplate) pattern.
+It is used in our [Kubernetes Patterns](https://leanpub.com/k8spatterns) book in examples for the [Configuration Template](https://github.com/k8spatterns/examples/tree/master/configuration/ConfigurationTemplate) pattern.
 
 You use this image typically as a base image like in 
 
